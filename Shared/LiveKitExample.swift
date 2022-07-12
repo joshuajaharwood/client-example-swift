@@ -114,18 +114,18 @@ struct LiveKitExample: App {
 
     @StateObject var appCtx = AppContext(store: sync)
 
-    func nearestSafeScale(for target: Int, scale: Double) -> Decimal {
-
-        let p = Decimal(sign: .plus, exponent: -3, significand: 1)
-        let t = Decimal(target)
-        var s = Decimal(scale).rounded(3, .down)
-
-        while (t * s / 2).remainder(of: 2) != 0 {
-            s = s + p
-        }
-
-        return s
-    }
+//    func nearestSafeScale(for target: Int, scale: Double) -> Decimal {
+//
+//        let p = Decimal(sign: .plus, exponent: -3, significand: 1)
+//        let t = Decimal(target)
+//        var s = Decimal(scale).rounded(3, .down)
+//
+//        while (t * s / 2).remainder(of: 2) != 0 {
+//            s = s + p
+//        }
+//
+//        return s
+//    }
 
     init() {
         LoggingSystem.bootstrap({

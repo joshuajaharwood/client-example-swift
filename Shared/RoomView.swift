@@ -71,6 +71,7 @@ struct RoomView: View {
 
     @State private var showConnectionTime = true
 
+    // Renders a View for a single message
     func messageView(_ message: ExampleRoomMessage) -> some View {
 
         let isMe = message.senderSid == room.room.localParticipant?.sid
@@ -102,6 +103,7 @@ struct RoomView: View {
         }
     }
 
+    
     func messagesView(geometry: GeometryProxy) -> some View {
 
         VStack(spacing: 0) {
@@ -588,7 +590,6 @@ struct ParticipantLayout<Content: View>: View {
                             }
                         }
                     }
-
                 }
             }
         }
